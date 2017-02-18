@@ -1,22 +1,38 @@
 #include <cs50.h>
 #include <stdio.h>
 
+void pyramids(int h);
+void right_pyramid(int tmp);
+
 int main (void)
 {
-    int all_rows;
-    int space;
-    int hash;
     int height = 0;
     do
     {
         printf("Height: ");
         height = get_int();
     } while (height < 0 || height > 23);
-    //цыкл пирамиды слева
-    for(all_rows = 1; all_rows <= height; all_rows++)
+    //цыкл пирамиды 
+    pyramids(height);
+}           
+
+void right_pyramid(int tmp)
+{
+    for(int i = 0; i < tmp; i++)
+        {
+           printf("#");
+        }
+        printf("\n");
+}
+ void pyramids(int h)
+ {
+    int all_rows;
+    int space;
+    int hash;
+     for(all_rows = 1; all_rows <= h; all_rows++)
     {
         //делаем пробелы
-        for(space = 0; space < height - all_rows; space++)
+        for(space = 0; space < h - all_rows; space++)
         {
             printf(" ");
         }
@@ -28,11 +44,6 @@ int main (void)
         //создаем поле между полу - пирамидами
         printf("  ");
         //цыкл пирамиды направо
-        for(int i = 0; i < all_rows; i++)
-        {
-           printf("#");
-        }
-        printf("\n");
+        right_pyramid(all_rows);
     }
-    
-}
+ }
