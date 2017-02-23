@@ -2,14 +2,14 @@
 #include <string.h>
 #include <stdio.h>
 //иницилизируем константы
-const int const_max_card_number = 16;
-const char const_first_number_is_4 = '4';
-const char const_first_number_is_3 = '3';
-const char const_first_number_is_5 = '5';
-const char const_second_number_is_4 = '4';
-const char const_second_number_is_7 = '7';
-const char const_second_number_is_1 = '1';
-const char const_second_number_is_5 = '5';
+const int CONST_MAX_CARD_NUMBER = 16;
+const char CONST_FIRST_NUMBER_IS_4 = '4';
+const char CONST_FIRST_NUMBER_IS_3 = '3';
+const char CONST_FIRST_NUMBER_IS_5 = '5';
+const char CONST_SECOND_NUMBER_IS_4 = '4';
+const char CONST_SECOND_NUMBER_IS_7 = '7';
+const char CONST_SECOND_NUMBER_IS_1 = '1';
+const char CONST_SECOND_NUMBER_IS_5 = '5';
 //инициализируем фукнцию суммы цыфр
 int summary(int temp_number);
 // Иницилизируем алгоритм Люна.
