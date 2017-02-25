@@ -22,12 +22,12 @@ int main (void)
     long long number;
     number = read_card("Number of the card: ");
     //создаем строку и конвертируем в нее наш номер карты
-    char card_str[const_max_card_number];
+    char card_str[CONST_MAX_CARD_NUMBER];
     sprintf(card_str,"%lld", number);
     //проверяем условия, для каждого типа карт и выводим результат
-    if (card_str[0] == const_first_number_is_4 && Luhn(card_str)) printf("VISA\n");
-    else if (card_str[0] == const_first_number_is_3 && (card_str[1] == const_second_number_is_4 || card_str[1] == const_second_number_is_4) && Luhn(card_str)) printf("AMEX\n");
-    else if (card_str[0] == const_first_number_is_5 && (card_str[1] >= const_second_number_is_1 || card_str[1] <= const_second_number_is_5) && Luhn(card_str)) printf("MASTERCARD\n");
+    if (card_str[0] == CONST_FIRST_NUMBER_IS_4 && Luhn(card_str)) printf("VISA\n");
+    else if (card_str[0] == CONST_FIRST_NUMBER_IS_3 && (card_str[1] == CONST_SECOND_NUMBER_IS_4 || card_str[1] == CONST_SECOND_NUMBER_IS_7) && Luhn(card_str)) printf("AMEX\n");
+    else if (card_str[0] == CONST_FIRST_NUMBER_IS_5 && (card_str[1] >= CONST_SECOND_NUMBER_IS_1 || card_str[1] <= CONST_SECOND_NUMBER_IS_5) && Luhn(card_str)) printf("MASTERCARD\n");
     else printf("INVALID\n");
     return 0;
 }
